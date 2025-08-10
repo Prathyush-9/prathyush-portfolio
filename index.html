@@ -27,14 +27,8 @@
         <a class="hover:text-brand-600" href="#/portfolio">Portfolio</a>
       </nav>
       <div class="flex items-center gap-3">
-        <a id="resumeLink" href="Prathyush_KVSS_Resume.pdf" class="hidden sm:inline-flex items-center gap-2 px-3 py-2 rounded-xl bg-brand-600 hover:bg-brand-700 text-white text-sm shadow-soft" aria-label="Download Resume">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-          Resume
-        </a>
-        <button id="themeToggle" class="p-2 rounded-xl border border-slate-200 dark:border-slate-700" aria-label="Toggle theme">
-          <svg id="sunIcon" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
-          <svg id="moonIcon" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-        </button>
+        <a id="resumeLink" href="Prathyush_KVSS_Resume.pdf" class="hidden sm:inline-flex items-center gap-2 px-3 py-2 rounded-xl bg-brand-600 hover:bg-brand-700 text-white text-sm shadow-soft" aria-label="Download Resume">Resume</a>
+        <button id="themeToggle" class="p-2 rounded-xl border border-slate-200 dark:border-slate-700" aria-label="Toggle theme">🌓</button>
       </div>
     </div>
   </header>
@@ -42,40 +36,26 @@
   <main class="min-h-[70vh]">
     <!-- Page 1: HOME -->
     <section data-route="/" class="hidden py-16">
-      <div class="max-w-5xl mx-auto px-4 grid md:grid-cols-3 gap-10 items-start">
-        <div class="md:col-span-2">
-          <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">Hi, I'm <span class="text-brand-600">VENKATA SIVA SAI PRATHYUSH KOLLI </span></h1>
-          <p class="mt-4 text-lg text-slate-600 dark:text-slate-300">I'm a robotics engineer who loves building things end‑to‑end — from PCB & controls to computer vision and ROS. I focus on reliable systems, clean documentation, and getting robots to do useful work.</p>
-          <div class="mt-6 space-y-2 text-slate-700 dark:text-slate-300">
-            <p><strong>Email:</strong> <a class="underline" href="mailto:venkatasivasaip9@gmail.com">venkatasivasaip9@gmail.com</a></p>
-            <p><strong>GitHub:</strong> <a class="underline" href="https://github.com/Prathyush-9" target="_blank" rel="noreferrer">Prathyush-9</a></p>
-            <p><strong>LinkedIn:</strong> <a class="underline" href="https://www.linkedin.com/in/prathyush-kvss-9b5131174/" target="_blank" rel="noreferrer">prathyush-kvss-9b5131174</a></p>
-          </div>
-          <div class="mt-8 flex gap-3">
-            <a href="#/portfolio" class="px-4 py-2 rounded-xl bg-slate-900 text-white dark:bg-white dark:text-slate-900 font-semibold">View Portfolio</a>
-            <a href="Prathyush_KVSS_Resume.pdf" class="px-4 py-2 rounded-xl border border-slate-300 dark:border-slate-700">Download Resume</a>
-          </div>
+      <div class="max-w-5xl mx-auto px-4">
+        <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">Hi, I'm <span class="text-brand-600">VENKATA SIVA SAI PRATHYUSH KOLLI</span></h1>
+        <p class="mt-4 text-lg text-slate-600 dark:text-slate-300">I'm a robotics engineer who loves building things end‑to‑end — from PCB & controls to computer vision and ROS. I focus on reliable systems, clean documentation, and getting robots to do useful work.</p>
+        <div class="mt-6 space-y-2 text-slate-700 dark:text-slate-300">
+          <p><strong>Email:</strong> <a class="underline" href="mailto:venkatasivasaip9@gmail.com">venkatasivasaip9@gmail.com</a></p>
+          <p><strong>GitHub:</strong> <a class="underline" href="https://github.com/Prathyush-9" target="_blank" rel="noreferrer">Prathyush-9</a></p>
+          <p><strong>LinkedIn:</strong> <a class="underline" href="https://www.linkedin.com/in/prathyush-kvss-9b5131174/" target="_blank" rel="noreferrer">prathyush-kvss-9b5131174</a></p>
         </div>
-        <div>
-          <div class="aspect-square rounded-3xl bg-gradient-to-br from-brand-100 via-white to-brand-200 dark:from-slate-800 dark:via-slate-900 dark:to-slate-800 border border-slate-200 dark:border-slate-700 p-4">
-            <div class="w-full h-full rounded-2xl border border-dashed border-slate-300 dark:border-slate-700 flex items-center justify-center text-center p-6">
-              <p class="text-slate-500 dark:text-slate-400">Add your headshot here</p>
-            </div>
-          </div>
-          <div class="mt-4 p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700">
-            <p class="text-xs uppercase tracking-wider text-slate-500">Open to</p>
-            <p class="font-semibold">Robotics • CV • Controls (US)</p>
-          </div>
+        <div class="mt-8 flex gap-3">
+          <a href="#/portfolio" class="px-4 py-2 rounded-xl bg-slate-900 text-white dark:bg-white dark:text-slate-900 font-semibold">View Portfolio</a>
+          <a href="Prathyush_KVSS_Resume.pdf" class="px-4 py-2 rounded-xl border border-slate-300 dark:border-slate-700">Download Resume</a>
         </div>
       </div>
     </section>
 
     <!-- Page 2: PORTFOLIO -->
     <section data-route="/portfolio" class="hidden">
-      <!-- Education -->
       <section class="py-16 border-b border-slate-200 dark:border-slate-800">
         <div class="max-w-6xl mx-auto px-4">
-          <h2 id="education" class="text-2xl md:text-3xl font-extrabold">Education</h2>
+          <h2 class="text-2xl md:text-3xl font-extrabold">Education</h2>
           <div class="mt-6 grid gap-6">
             <article class="rounded-2xl border border-slate-200 dark:border-slate-700 p-6">
               <div class="flex items-center justify-between flex-wrap gap-2">
@@ -95,10 +75,9 @@
         </div>
       </section>
 
-      <!-- Experience -->
       <section class="py-16 border-b border-slate-200 dark:border-slate-800">
         <div class="max-w-6xl mx-auto px-4">
-          <h2 id="experience" class="text-2xl md:text-3xl font-extrabold">Experience</h2>
+          <h2 class="text-2xl md:text-3xl font-extrabold">Experience</h2>
           <div class="mt-6 grid gap-6">
             <article class="rounded-2xl border border-slate-200 dark:border-slate-700 p-6">
               <div class="flex items-center justify-between flex-wrap gap-2">
@@ -117,7 +96,7 @@
                 <span class="text-xs text-slate-500">Dec 2022 – Jun 2023 · Chennai, India</span>
               </div>
               <ul class="mt-2 text-sm text-slate-600 dark:text-slate-300 list-disc list-inside">
-                <li>Built batch & streaming pipelines (Kafka / Spark Streaming / APIs); automated ETL.</li>
+                <li>Built batch & streaming pipelines (Kafka / Spark Streaming / APIs) and automated ETL.</li>
                 <li>Developed Tableau dashboards for KPI visualization and reporting.</li>
                 <li>Wrote and optimized SQL for large‑scale transformations and analytics.</li>
               </ul>
@@ -147,10 +126,9 @@
         </div>
       </section>
 
-      <!-- Skills -->
       <section class="py-16 border-b border-slate-200 dark:border-slate-800">
         <div class="max-w-6xl mx-auto px-4">
-          <h2 id="skills" class="text-2xl md:text-3xl font-extrabold">Skills</h2>
+          <h2 class="text-2xl md:text-3xl font-extrabold">Skills</h2>
           <div class="mt-6 flex flex-wrap gap-2 text-sm">
             <span class="px-3 py-1 rounded-full bg-brand-50 text-brand-700 border border-brand-200">OpenCV</span>
             <span class="px-3 py-1 rounded-full bg-brand-50 text-brand-700 border border-brand-200">ROS / Gazebo</span>
@@ -166,10 +144,9 @@
         </div>
       </section>
 
-      <!-- Projects -->
       <section class="py-16 border-b border-slate-200 dark:border-slate-800">
         <div class="max-w-6xl mx-auto px-4">
-          <h2 id="projects" class="text-2xl md:text-3xl font-extrabold">Projects</h2>
+          <h2 class="text-2xl md:text-3xl font-extrabold">Projects</h2>
           <div class="mt-8 grid md:grid-cols-2 gap-6">
             <article class="rounded-2xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 p-6 hover:shadow-soft transition">
               <h3 class="text-lg font-bold">AGV Navigation & PLC Controls</h3>
@@ -207,27 +184,15 @@
         </div>
       </section>
 
-      <!-- Interests -->
-      <section class="py-16 border-b border-slate-200 dark:border-slate-800">
+      <section class="py-16">
         <div class="max-w-6xl mx-auto px-4">
-          <h2 id="interests" class="text-2xl md:text-3xl font-extrabold">Interests</h2>
+          <h2 class="text-2xl md:text-3xl font-extrabold">Interests</h2>
           <div class="mt-6 flex flex-wrap gap-2 text-sm">
             <span class="px-3 py-1 rounded-full border">Badminton</span>
             <span class="px-3 py-1 rounded-full border">Chess</span>
             <span class="px-3 py-1 rounded-full border">Photography</span>
             <span class="px-3 py-1 rounded-full border">DIY Electronics</span>
           </div>
-        </div>
-      </section>
-
-      <!-- Certifications -->
-      <section class="py-16">
-        <div class="max-w-6xl mx-auto px-4">
-          <h2 id="certifications" class="text-2xl md:text-3xl font-extrabold">Certifications</h2>
-          <p class="mt-4 text-sm text-slate-600 dark:text-slate-300">(Add any formal certifications here. If you’d like me to import from LinkedIn or resume, send the names and I’ll populate this list.)</p>
-          <ul class="mt-3 text-sm list-disc list-inside text-slate-600 dark:text-slate-300">
-            <!-- <li>Example: Siemens TIA Portal Basic</li> -->
-          </ul>
         </div>
       </section>
     </section>
@@ -245,20 +210,12 @@
   </footer>
 
   <script>
-    // utils
-    const $ = (s)=>document.querySelector(s); const $$=(s)=>Array.from(document.querySelectorAll(s));
-    // footer year
     $('#year').textContent = new Date().getFullYear();
-    // dark toggle
-    const root = document.documentElement; const themeToggle=$('#themeToggle'); const sunIcon=$('#sunIcon'); const moonIcon=$('#moonIcon');
+    const root = document.documentElement; const themeToggle=$('#themeToggle');
     const pref = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark':'light');
     if (pref==='dark') root.classList.add('dark');
-    sunIcon.classList.toggle('hidden', pref!=='light');
-    moonIcon.classList.toggle('hidden', pref!=='dark');
-    themeToggle.addEventListener('click', ()=>{ const isDark = root.classList.toggle('dark'); localStorage.setItem('theme', isDark?'dark':'light'); sunIcon.classList.toggle('hidden', isDark); moonIcon.classList.toggle('hidden', !isDark); });
-
-    // tiny router
-    const routes = $$('[data-route]');
+    themeToggle.addEventListener('click', ()=>{ const isDark = root.classList.toggle('dark'); localStorage.setItem('theme', isDark?'dark':'light'); });
+    const routes = document.querySelectorAll('[data-route]');
     function renderRoute(){ const hash = location.hash.replace('#',''); const path = hash || '/'; routes.forEach(sec => sec.classList.toggle('hidden', sec.getAttribute('data-route') !== path)); }
     window.addEventListener('hashchange', renderRoute); renderRoute();
   </script>
