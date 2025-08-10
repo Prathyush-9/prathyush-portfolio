@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Prathyush | Robotics Engineer Portfolio</title>
+  <meta name="description" content="Portfolio of Prathyush – Robotics Engineer specializing in Computer Vision, Automation, and Mechatronics." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Tailwind Play CDN (works on GitHub Pages/Netlify) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    // Tailwind config
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'ui-sans-serif', 'system-ui'] },
+          colors: {
+            brand: {
+              50: '#f0f9ff', 100: '#e0f2fe', 200: '#bae6fd', 300: '#7dd3fc',
+              400: '#38bdf8', 500: '#0ea5e9', 600: '#0284c7', 700: '#0369a1',
+              800: '#075985', 900: '#0c4a6e'
+            }
+          },
+          boxShadow: {
+            soft: '0 10px 30px rgba(2, 132, 199, 0.12)'
+          }
+        }
+      },
+      darkMode: 'class'
+    };
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    /* Hide default focus outlines only if we supply a better one via Tailwind */
+    :focus { outline: none; }
+  </style>
+</head>
+<body class="bg-white text-slate-800 dark:bg-slate-900 dark:text-slate-100 font-sans">
+  <!-- Header / Nav -->
+  <header class="sticky top-0 backdrop-blur bg-white/70 dark:bg-slate-900/70 z-40 border-b border-slate-200/60 dark:border-slate-800">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="#home" class="text-lg font-extrabold tracking-tight">PRATHYUSH</a>
+      <nav class="hidden md:flex gap-6 text-sm font-medium">
+        <a class="hover:text-brand-600" href="#about">About</a>
+        <a class="hover:text-brand-600" href="#skills">Skills</a>
+        <a class="hover:text-brand-600" href="#projects">Projects</a>
+        <a class="hover:text-brand-600" href="#experience">Experience</a>
+        <a class="hover:text-brand-600" href="#education">Education</a>
+        <a class="hover:text-brand-600" href="#contact">Contact</a>
+      </nav>
+      <div class="flex items-center gap-3">
+        <a id="resumeLink" href="#" class="hidden sm:inline-flex items-center gap-2 px-3 py-2 rounded-xl bg-brand-600 hover:bg-brand-700 text-white text-sm shadow-soft" aria-label="Download Resume">
+          <!-- download icon -->
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Resume
+        </a>
+        <button id="themeToggle" class="p-2 rounded-xl border border-slate-200 dark:border-slate-700" aria-label="Toggle theme">
+          <!-- sun/moon icon swaps via JS -->
+          <svg id="sunIcon" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+          <svg id="moonIcon" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="home" class="pt-20 md:pt-28 pb-16">
+    <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-10 items-center">
+      <div>
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-100 text-brand-700 text-xs font-semibold">Open to Roles · H1B Sponsorship</div>
+        <h1 class="mt-4 text-4xl md:text-5xl font-extrabold leading-tight">Robotics Engineer — <span class="text-brand-600">Computer Vision & Automation</span></h1>
+        <p class="mt-4 text-slate-600 dark:text-slate-300 text-lg">I'm Prathyush, a recent M.S. Robotics grad (University of Delaware, May 2025) focused on perception, controls, and mechatronics. I build reliable systems—from PCB to PLC to AI.</p>
+        <div class="mt-6 flex flex-wrap gap-3">
+          <a href="#projects" class="px-4 py-2 rounded-xl bg-slate-900 text-white dark:bg-white dark:text-slate-900 font-semibold">See Projects</a>
+          <a href="#contact" class="px-4 py-2 rounded-xl border border-slate-300 dark:border-slate-700">Contact Me</a>
+        </div>
+        <div class="mt-6 flex items-center gap-4 text-sm">
+          <a class="hover:text-brand-600 underline underline-offset-4" href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a class="hover:text-brand-600 underline underline-offset-4" href="https://github.com/" target="_blank" rel="noreferrer">GitHub</a>
+          <a class="hover:text-brand-600 underline underline-offset-4" href="mailto:your.email@example.com">Email</a>
+        </div>
+      </div>
+      <div class="relative">
+        <div class="aspect-square rounded-3xl bg-gradient-to-br from-brand-100 via-white to-brand-200 dark:from-slate-800 dark:via-slate-900 dark:to-slate-800 border border-slate-200 dark:border-slate-700 p-4">
+          <div class="w-full h-full rounded-2xl border border-dashed border-slate-300 dark:border-slate-700 flex items-center justify-center text-center p-6">
+            <p class="text-slate-500 dark:text-slate-400">Your photo or a hero graphic can go here.<br/><span class="text-xs">(Replace this box with an <code>&lt;img&gt;</code> tag.)</span></p>
+          </div>
+        </div>
+        <div class="absolute -bottom-6 -left-6 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-4 shadow-soft">
+          <p class="text-xs uppercase tracking-wider text-slate-500">Actively Seeking</p>
+          <p class="font-semibold">Robotics • CV • Controls</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="py-16 border-t border-slate-200 dark:border-slate-800">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-2xl md:text-3xl font-extrabold">About</h2>
+      <p class="mt-4 text-slate-600 dark:text-slate-300 leading-relaxed">I enjoy building end‑to‑end robotic systems. My experience spans PCB design and embedded bring‑up, perception with OpenCV/ROS, and factory‑floor automation with PLCs. Recent work includes a Schmitt‑trigger PCB for signal conditioning, PID tuning for AGV guidance, and a suction‑based 3‑DOF manipulator with ROS/Gazebo.</p>
+      <div class="mt-6 grid sm:grid-cols-3 gap-4 text-sm">
+        <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700">
+          <p class="uppercase text-xs tracking-wider text-slate-500">Looking for</p>
+          <p class="font-semibold">Robotics / Vision / Controls roles (US)</p>
+        </div>
+        <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700">
+          <p class="uppercase text-xs tracking-wider text-slate-500">Work auth</p>
+          <p class="font-semibold">OPT EAD (July 2025) · H1B Sponsorship</p>
+        </div>
+        <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700">
+          <p class="uppercase text-xs tracking-wider text-slate-500">Location</p>
+          <p class="font-semibold">USA (open to relocate)</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="py-16">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-2xl md:text-3xl font-extrabold">Skills</h2>
+      <div class="mt-6 flex flex-wrap gap-2 text-sm">
+        <span class="px-3 py-1 rounded-full bg-brand-50 text-brand-700 border border-brand-200">OpenCV</span>
+        <span class="px-3 py-1 rounded-full bg-brand-50 text-brand-700 border border-brand-200">ROS / Gazebo</span>
+        <span class="px-3 py-1 rounded-full bg-brand-50 text-brand-700 border border-brand-200">Python, C++</span>
+        <span class="px-3 py-1 rounded-full bg-brand-50 text-brand-700 border border-brand-200">PLC (Siemens, AB, Mitsubishi)</span>
+        <span class="px-3 py-1 rounded-full bg-brand-50 text-brand-700 border border-brand-200">PID Tuning</span>
+        <span class="px-3 py-1 rounded-full bg-brand-50 text-brand-700 border border-brand-200">PCB Design</span>
+        <span class="px-3 py-1 rounded-full bg-brand-50 text-brand-700 border border-brand-200">SolidWorks & FEA</span>
+        <span class="px-3 py-1 rounded-full bg-brand-50 text-brand-700 border border-brand-200">Linux</span>
+        <span class="px-3 py-1 rounded-full bg-brand-50 text-brand-700 border border-brand-200">Git</span>
+        <span class="px-3 py-1 rounded-full bg-brand-50 text-brand-700 border border-brand-200">TensorFlow/PyTorch (basics)</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="py-16 border-t border-slate-200 dark:border-slate-800">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="flex items-end justify-between">
+        <h2 class="text-2xl md:text-3xl font-extrabold">Projects</h2>
+        <a href="#contact" class="text-sm underline underline-offset-4 hover:text-brand-600">Collaborate →</a>
+      </div>
+      <div class="mt-8 grid md:grid-cols-2 gap-6">
+        <!-- Project Card -->
+        <article class="rounded-2xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 p-6 hover:shadow-soft transition">
+          <h3 class="text-lg font-bold">AGV Navigation & PLC Controls</h3>
+          <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Developed and debugged PLC logic (Siemens/Mitsubishi/Allen‑Bradley) for AGV interfaces; tuned PID for magnetic‑tape guidance; participated in LiDAR navigation trials for AMR.</p>
+          <ul class="mt-3 text-sm list-disc list-inside text-slate-600 dark:text-slate-300">
+            <li>Improved tracking stability and reduced overshoot</li>
+            <li>Deployed on lab floor with safety interlocks</li>
+          </ul>
+          <div class="mt-4 flex gap-3 text-xs">
+            <span class="px-2 py-1 rounded border">PLC</span>
+            <span class="px-2 py-1 rounded border">Controls</span>
+            <span class="px-2 py-1 rounded border">LiDAR</span>
+          </div>
+        </article>
+        
+        <article class="rounded-2xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 p-6 hover:shadow-soft transition">
+          <h3 class="text-lg font-bold">Schmitt‑Trigger Signal Board</h3>
+          <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Designed a custom PCB for signal conditioning; validated with oscilloscope; handled etching/cleanup and bring‑up; integrated with digital control stack.</p>
+          <ul class="mt-3 text-sm list-disc list-inside text-slate-600 dark:text-slate-300">
+            <li>Noise reduction for clean edge detection</li>
+            <li>Documented BOM & test procedure</li>
+          </ul>
+          <div class="mt-4 flex gap-3 text-xs">
+            <span class="px-2 py-1 rounded border">PCB</span>
+            <span class="px-2 py-1 rounded border">Oscilloscope</span>
+            <span class="px-2 py-1 rounded border">Digital</span>
+          </div>
+        </article>
+
+        <article class="rounded-2xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 p-6 hover:shadow-soft transition">
+          <h3 class="text-lg font-bold">3‑DOF Manipulator + ROS/Gazebo</h3>
+          <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Built a suction‑based pick‑and‑place arm; simulated in ROS/Gazebo and validated with a 300 g payload; integrated simple vision for object placement.</p>
+          <ul class="mt-3 text-sm list-disc list-inside text-slate-600 dark:text-slate-300">
+            <li>End‑to‑end design: CAD → sim → hardware</li>
+            <li>Basic perception and planning</li>
+          </ul>
+          <div class="mt-4 flex gap-3 text-xs">
+            <span class="px-2 py-1 rounded border">ROS</span>
+            <span class="px-2 py-1 rounded border">Gazebo</span>
+            <span class="px-2 py-1 rounded border">Pick&Place</span>
+          </div>
+        </article>
+
+        <article class="rounded-2xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 p-6 hover:shadow-soft transition">
+          <h3 class="text-lg font-bold">ASRS – Quality Control</h3>
+          <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Assisted with automated storage/retrieval system QA; image‑based defect checks and tolerance verification in OpenCV; documented workflow and metrics.</p>
+          <ul class="mt-3 text-sm list-disc list-inside text-slate-600 dark:text-slate-300">
+            <li>Improved detection consistency with lighting control</li>
+            <li>Reusable pipeline for future cells</li>
+          </ul>
+          <div class="mt-4 flex gap-3 text-xs">
+            <span class="px-2 py-1 rounded border">OpenCV</span>
+            <span class="px-2 py-1 rounded border">QA</span>
+            <span class="px-2 py-1 rounded border">ASRS</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section id="experience" class="py-16">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-2xl md:text-3xl font-extrabold">Experience</h2>
+      <div class="mt-6 grid gap-6">
+        <div class="rounded-2xl border border-slate-200 dark:border-slate-700 p-6">
+          <div class="flex items-center justify-between flex-wrap gap-2">
+            <h3 class="font-bold">Vision / Robotics Engineer — Projects & Labs</h3>
+            <span class="text-xs text-slate-500">2023 – 2025</span>
+          </div>
+          <ul class="mt-2 text-sm text-slate-600 dark:text-slate-300 list-disc list-inside">
+            <li>Developed machine vision checks for quality control (OpenCV, controlled lighting)</li>
+            <li>Integrated cameras, optics, and PLC interfaces on lab floor</li>
+            <li>Wrote and optimized SQL for ETL → reporting pipelines supporting tests</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education -->
+  <section id="education" class="py-16 border-t border-slate-200 dark:border-slate-800">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-2xl md:text-3xl font-extrabold">Education</h2>
+      <div class="mt-6 grid gap-6">
+        <div class="rounded-2xl border border-slate-200 dark:border-slate-700 p-6">
+          <div class="flex items-center justify-between flex-wrap gap-2">
+            <h3 class="font-bold">M.S., Robotics — University of Delaware</h3>
+            <span class="text-xs text-slate-500">Graduated May 2025</span>
+          </div>
+          <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Focus: Computer Vision, Mechatronics, Controls. Coursework: Perception, Planning, Embedded Systems.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-16">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-2xl md:text-3xl font-extrabold">Contact</h2>
+      <p class="mt-4 text-slate-600 dark:text-slate-300">Want to discuss a role or collaboration? Email me at <a class="underline underline-offset-4" href="mailto:your.email@example.com">your.email@example.com</a> or use the form below.</p>
+      <!-- Simple Formspree-ready form (replace action with your endpoint) -->
+      <form class="mt-6 grid gap-4 max-w-xl" action="#" method="POST">
+        <input required name="name" placeholder="Your name" class="px-4 py-3 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900" />
+        <input required name="email" type="email" placeholder="Your email" class="px-4 py-3 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900" />
+        <textarea required name="message" placeholder="Your message" rows="4" class="px-4 py-3 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900"></textarea>
+        <button class="px-4 py-3 rounded-xl bg-brand-600 hover:bg-brand-700 text-white font-semibold w-fit">Send</button>
+      </form>
+    </div>
+  </section>
+
+  <footer class="py-10 border-t border-slate-200 dark:border-slate-800">
+    <div class="max-w-6xl mx-auto px-4 text-sm flex flex-col sm:flex-row items-center justify-between gap-2">
+      <p>© <span id="year"></span> Prathyush. All rights reserved.</p>
+      <a href="#home" class="underline underline-offset-4">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <script>
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Dark mode toggle with localStorage
+    const root = document.documentElement;
+    const themeToggle = document.getElementById('themeToggle');
+    const sunIcon = document.getElementById('sunIcon');
+    const moonIcon = document.getElementById('moonIcon');
+    const theme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    if (theme === 'dark') root.classList.add('dark');
+    sunIcon.classList.toggle('hidden', theme !== 'light');
+    moonIcon.classList.toggle('hidden', theme !== 'dark');
+
+    themeToggle.addEventListener('click', () => {
+      const isDark = root.classList.toggle('dark');
+      localStorage.setItem('theme', isDark ? 'dark' : 'light');
+      sunIcon.classList.toggle('hidden', isDark);
+      moonIcon.classList.toggle('hidden', !isDark);
+    });
+
+    // Replace with your resume URL if available
+    document.getElementById('resumeLink').href = '#'; // e.g., 'files/Prathyush_Resume.pdf'
+  </script>
+</body>
+</html>
