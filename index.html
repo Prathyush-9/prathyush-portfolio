@@ -1,24 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>Prathyush KVSS | Portfolio</title>
-  <meta name="description" content="Prathyush KVSS – Robotics Engineer portfolio." />
+  <meta name="description" content="Prathyush KVSS – Robotics Engineer portfolio."/>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
       darkMode: 'class',
-      theme: { extend: { fontFamily: { sans: ['Inter', 'ui-sans-serif', 'system-ui'] }, colors: { brand: { 50:'#f0f9ff',100:'#e0f2fe',200:'#bae6fd',300:'#7dd3fc',400:'#38bdf8',500:'#0ea5e9',600:'#0284c7',700:'#0369a1',800:'#075985',900:'#0c4a6e' }}, boxShadow:{soft:'0 10px 30px rgba(2,132,199,.12)'} } }
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'ui-sans-serif', 'system-ui'] },
+          colors: { brand: { 50:'#f0f9ff',100:'#e0f2fe',200:'#bae6fd',300:'#7dd3fc',400:'#38bdf8',500:'#0ea5e9',600:'#0284c7',700:'#0369a1',800:'#075985',900:'#0c4a6e' } },
+          boxShadow: { soft: '0 10px 30px rgba(2,132,199,.12)' }
+        }
+      }
     }
   </script>
-  <style> html{scroll-behavior:smooth} </style>
+  <style>html{scroll-behavior:smooth}</style>
 </head>
 <body class="bg-white text-slate-800 dark:bg-slate-900 dark:text-slate-100 font-sans">
-  <!-- Header -->
   <header class="sticky top-0 z-40 backdrop-blur bg-white/70 dark:bg-slate-900/70 border-b border-slate-200/60 dark:border-slate-800">
     <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
       <a href="#/" class="text-lg font-extrabold tracking-tight">PRATHYUSH</a>
@@ -27,22 +32,33 @@
         <a class="hover:text-brand-600" href="#/portfolio">Portfolio</a>
       </nav>
       <div class="flex items-center gap-3">
-        <a id="resumeLink" href="Prathyush_KVSS_Resume.pdf" class="hidden sm:inline-flex items-center gap-2 px-3 py-2 rounded-xl bg-brand-600 hover:bg-brand-700 text-white text-sm shadow-soft" aria-label="Download Resume">Resume</a>
+        <a href="Prathyush_KVSS_Resume.pdf" class="hidden sm:inline-flex items-center gap-2 px-3 py-2 rounded-xl bg-brand-600 hover:bg-brand-700 text-white text-sm shadow-soft">Resume</a>
         <button id="themeToggle" class="p-2 rounded-xl border border-slate-200 dark:border-slate-700" aria-label="Toggle theme">🌓</button>
       </div>
     </div>
   </header>
 
   <main class="min-h-[70vh]">
-    <!-- Page 1: HOME -->
-    <section data-route="/" class="hidden py-16">
+    <!-- Home (visible by default) -->
+    <section data-route="/" class="py-16">
       <div class="max-w-5xl mx-auto px-4">
-        <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">Hi, I'm <span class="text-brand-600">VENKATA SIVA SAI PRATHYUSH KOLLI</span></h1>
-        <p class="mt-4 text-lg text-slate-600 dark:text-slate-300">I'm a robotics engineer who loves building things end‑to‑end — from PCB & controls to computer vision and ROS. I focus on reliable systems, clean documentation, and getting robots to do useful work.</p>
+        <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">Hi, I'm
+          <span class="text-brand-600">VENKATA SIVA SAI PRATHYUSH KOLLI</span>
+        </h1>
+        <p class="mt-4 text-lg text-slate-600 dark:text-slate-300">
+          I'm a robotics engineer who loves building things end-to-end — from PCB & controls to computer vision and ROS.
+          I focus on reliable systems, clean documentation, and getting robots to do useful work.
+        </p>
         <div class="mt-6 space-y-2 text-slate-700 dark:text-slate-300">
-          <p><strong>Email:</strong> <a class="underline" href="mailto:venkatasivasaip9@gmail.com">venkatasivasaip9@gmail.com</a></p>
-          <p><strong>GitHub:</strong> <a class="underline" href="https://github.com/Prathyush-9" target="_blank" rel="noreferrer">Prathyush-9</a></p>
-          <p><strong>LinkedIn:</strong> <a class="underline" href="https://www.linkedin.com/in/prathyush-kvss-9b5131174/" target="_blank" rel="noreferrer">prathyush-kvss-9b5131174</a></p>
+          <p><strong>Email:</strong>
+            <a class="underline" href="mailto:venkatasivasaip9@gmail.com">venkatasivasaip9@gmail.com</a>
+          </p>
+          <p><strong>GitHub:</strong>
+            <a class="underline" href="https://github.com/Prathyush-9" target="_blank" rel="noreferrer">Prathyush-9</a>
+          </p>
+          <p><strong>LinkedIn:</strong>
+            <a class="underline" href="https://www.linkedin.com/in/prathyush-kvss-9b5131174/" target="_blank" rel="noreferrer">prathyush-kvss-9b5131174</a>
+          </p>
         </div>
         <div class="mt-8 flex gap-3">
           <a href="#/portfolio" class="px-4 py-2 rounded-xl bg-slate-900 text-white dark:bg-white dark:text-slate-900 font-semibold">View Portfolio</a>
@@ -51,8 +67,9 @@
       </div>
     </section>
 
-    <!-- Page 2: PORTFOLIO -->
+    <!-- Portfolio (hash-routed) -->
     <section data-route="/portfolio" class="hidden">
+      <!-- Education -->
       <section class="py-16 border-b border-slate-200 dark:border-slate-800">
         <div class="max-w-6xl mx-auto px-4">
           <h2 class="text-2xl md:text-3xl font-extrabold">Education</h2>
@@ -62,19 +79,24 @@
                 <h3 class="font-bold">M.S., Robotics — University of Delaware</h3>
                 <span class="text-xs text-slate-500">May 2025 · GPA: 3.46/4.0</span>
               </div>
-              <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Focus: Computer Vision, Mechatronics, Controls. Coursework: Perception, Planning, Embedded Systems.</p>
+              <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">
+                Focus: Computer Vision, Mechatronics, Controls. Coursework: Perception, Planning, Embedded Systems.
+              </p>
             </article>
             <article class="rounded-2xl border border-slate-200 dark:border-slate-700 p-6">
               <div class="flex items-center justify-between flex-wrap gap-2">
                 <h3 class="font-bold">B.Tech, Automation & Robotics — KLE Technological University</h3>
                 <span class="text-xs text-slate-500">Jun 2022 · GPA: 4.00/4.0</span>
               </div>
-              <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Coursework: Kinematics of Machinery; Robot Analysis & Design; Programming Industrial Automation Systems; ML & ROS; Computer Vision & AI.</p>
+              <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">
+                Coursework: Kinematics of Machinery; Robot Analysis & Design; Programming Industrial Automation Systems; ML & ROS; Computer Vision & AI.
+              </p>
             </article>
           </div>
         </div>
       </section>
 
+      <!-- Experience -->
       <section class="py-16 border-b border-slate-200 dark:border-slate-800">
         <div class="max-w-6xl mx-auto px-4">
           <h2 class="text-2xl md:text-3xl font-extrabold">Experience</h2>
@@ -85,11 +107,12 @@
                 <span class="text-xs text-slate-500">May 2024 – Jul 2024 · Newark, DE</span>
               </div>
               <ul class="mt-2 text-sm text-slate-600 dark:text-slate-300 list-disc list-inside">
-                <li>Designed SolidWorks models for plate‑based microrobot monitoring and motion tracking.</li>
+                <li>Designed SolidWorks models for plate-based microrobot monitoring and motion tracking.</li>
                 <li>Implemented Python control to steer microrobots via a 3D Helmholtz magnetic coil system.</li>
                 <li>Maintained stable environmental parameters inside the incubation chamber.</li>
               </ul>
             </article>
+
             <article class="rounded-2xl border border-slate-200 dark:border-slate-700 p-6">
               <div class="flex items-center justify-between flex-wrap gap-2">
                 <h3 class="font-bold">Accenture — Data Engineering Associate</h3>
@@ -98,27 +121,29 @@
               <ul class="mt-2 text-sm text-slate-600 dark:text-slate-300 list-disc list-inside">
                 <li>Built batch & streaming pipelines (Kafka / Spark Streaming / APIs) and automated ETL.</li>
                 <li>Developed Tableau dashboards for KPI visualization and reporting.</li>
-                <li>Wrote and optimized SQL for large‑scale transformations and analytics.</li>
+                <li>Wrote and optimized SQL for large-scale transformations and analytics.</li>
               </ul>
             </article>
+
             <article class="rounded-2xl border border-slate-200 dark:border-slate-700 p-6">
               <div class="flex items-center justify-between flex-wrap gap-2">
                 <h3 class="font-bold">Difacto Robotics & Automation — Control Systems Intern</h3>
                 <span class="text-xs text-slate-500">Jan 2022 – Jun 2022 · Bangalore, India</span>
               </div>
               <ul class="mt-2 text-sm text-slate-600 dark:text-slate-300 list-disc list-inside">
-                <li>Programmed & debugged PLC logic (Siemens / Mitsubishi / Allen‑Bradley) for AGV systems.</li>
-                <li>PID tuning for magnetic‑tape guidance; collaborated on LiDAR‑based AMR navigation.</li>
-                <li>Configured HMIs; commissioned control panels with on‑site testing.</li>
+                <li>Programmed & debugged PLC logic (Siemens / Mitsubishi / Allen-Bradley) for AGV systems.</li>
+                <li>PID tuning for magnetic-tape guidance; collaborated on LiDAR-based AMR navigation.</li>
+                <li>Configured HMIs; commissioned control panels with on-site testing.</li>
               </ul>
             </article>
+
             <article class="rounded-2xl border border-slate-200 dark:border-slate-700 p-6">
               <div class="flex items-center justify-between flex-wrap gap-2">
                 <h3 class="font-bold">Assemtica Robotics — Robotics Intern</h3>
                 <span class="text-xs text-slate-500">Mar 2019 – Jun 2019 · Vijayawada, India</span>
               </div>
               <ul class="mt-2 text-sm text-slate-600 dark:text-slate-300 list-disc list-inside">
-                <li>Built real‑time computer‑vision pipelines for detection, tracking, and classification.</li>
+                <li>Built real-time computer-vision pipelines for detection, tracking, and classification.</li>
                 <li>Enhanced CV apps with automated testing and ML; contributed to Industry 4.0 workflows.</li>
               </ul>
             </article>
@@ -126,55 +151,68 @@
         </div>
       </section>
 
+      <!-- Skills -->
       <section class="py-16 border-b border-slate-200 dark:border-slate-800">
         <div class="max-w-6xl mx-auto px-4">
           <h2 class="text-2xl md:text-3xl font-extrabold">Skills</h2>
-          <div class="mt-6 flex flex-wrap gap-2 text-sm">
-            <span class="px-3 py-1 rounded-full bg-brand-50 text-brand-700 border border-brand-200">OpenCV</span>
-            <span class="px-3 py-1 rounded-full bg-brand-50 text-brand-700 border border-brand-200">ROS / Gazebo</span>
-            <span class="px-3 py-1 rounded-full bg-brand-50 text-brand-700 border border-brand-200">Python, C++</span>
-            <span class="px-3 py-1 rounded-full bg-brand-50 text-brand-700 border border-brand-200">PLC (Siemens, AB, Mitsubishi)</span>
-            <span class="px-3 py-1 rounded-full bg-brand-50 text-brand-700 border border-brand-200">PID Tuning</span>
-            <span class="px-3 py-1 rounded-full bg-brand-50 text-brand-700 border border-brand-200">PCB Design</span>
-            <span class="px-3 py-1 rounded-full bg-brand-50 text-brand-700 border border-brand-200">SolidWorks & FEA</span>
-            <span class="px-3 py-1 rounded-full bg-brand-50 text-brand-700 border border-brand-200">Linux</span>
-            <span class="px-3 py-1 rounded-full bg-brand-50 text-brand-700 border border-brand-200">Git</span>
-            <span class="px-3 py-1 rounded-full bg-brand-50 text-brand-700 border border-brand-200">TensorFlow/PyTorch (basics)</span>
-          </div>
+        </div>
+        <div class="max-w-6xl mx-auto px-4 mt-6 flex flex-wrap gap-2 text-sm">
+          <span class="px-3 py-1 rounded-full bg-brand-50 text-brand-700 border border-brand-200">OpenCV</span>
+          <span class="px-3 py-1 rounded-full bg-brand-50 text-brand-700 border border-brand-200">ROS / Gazebo</span>
+          <span class="px-3 py-1 rounded-full bg-brand-50 text-brand-700 border border-brand-200">Python, C++</span>
+          <span class="px-3 py-1 rounded-full bg-brand-50 text-brand-700 border border-brand-200">PLC (Siemens, AB, Mitsubishi)</span>
+          <span class="px-3 py-1 rounded-full bg-brand-50 text-brand-700 border border-brand-200">PID Tuning</span>
+          <span class="px-3 py-1 rounded-full bg-brand-50 text-brand-700 border border-brand-200">PCB Design</span>
+          <span class="px-3 py-1 rounded-full bg-brand-50 text-brand-700 border border-brand-200">SolidWorks & FEA</span>
+          <span class="px-3 py-1 rounded-full bg-brand-50 text-brand-700 border border-brand-200">Linux</span>
+          <span class="px-3 py-1 rounded-full bg-brand-50 text-brand-700 border border-brand-200">Git</span>
+          <span class="px-3 py-1 rounded-full bg-brand-50 text-brand-700 border border-brand-200">TensorFlow/PyTorch (basics)</span>
         </div>
       </section>
 
+      <!-- Projects -->
       <section class="py-16 border-b border-slate-200 dark:border-slate-800">
         <div class="max-w-6xl mx-auto px-4">
           <h2 class="text-2xl md:text-3xl font-extrabold">Projects</h2>
           <div class="mt-8 grid md:grid-cols-2 gap-6">
             <article class="rounded-2xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 p-6 hover:shadow-soft transition">
               <h3 class="text-lg font-bold">AGV Navigation & PLC Controls</h3>
-              <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Developed and debugged PLC logic for AGV interfaces; tuned PID for magnetic‑tape guidance; participated in LiDAR navigation trials for AMR.</p>
+              <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">
+                Developed and debugged PLC logic for AGV interfaces; tuned PID for magnetic-tape guidance; participated in LiDAR navigation trials for AMR.
+              </p>
               <ul class="mt-3 text-sm list-disc list-inside text-slate-600 dark:text-slate-300">
                 <li>Improved tracking stability and reduced overshoot</li>
                 <li>Deployed on lab floor with safety interlocks</li>
               </ul>
             </article>
+
             <article class="rounded-2xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 p-6 hover:shadow-soft transition">
-              <h3 class="text-lg font-bold">Schmitt‑Trigger Signal Board</h3>
-              <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Designed a custom PCB for signal conditioning; validated with oscilloscope; handled etching/cleanup and bring‑up; integrated with digital control stack.</p>
+              <h3 class="text-lg font-bold">Schmitt-Trigger Signal Board</h3>
+              <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">
+                Designed a custom PCB for signal conditioning; validated with oscilloscope; handled etching/cleanup and bring-up; integrated with digital control stack.
+              </p>
               <ul class="mt-3 text-sm list-disc list-inside text-slate-600 dark:text-slate-300">
                 <li>Noise reduction for clean edge detection</li>
                 <li>Documented BOM & test procedure</li>
               </ul>
             </article>
+
             <article class="rounded-2xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 p-6 hover:shadow-soft transition">
-              <h3 class="text-lg font-bold">3‑DOF Manipulator + ROS/Gazebo</h3>
-              <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Built a suction‑based pick‑and‑place arm; simulated in ROS/Gazebo and validated with a 300 g payload; integrated simple vision for object placement.</p>
+              <h3 class="text-lg font-bold">3-DOF Manipulator + ROS/Gazebo</h3>
+              <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">
+                Built a suction-based pick-and-place arm; simulated in ROS/Gazebo and validated with a 300 g payload; integrated simple vision for object placement.
+              </p>
               <ul class="mt-3 text-sm list-disc list-inside text-slate-600 dark:text-slate-300">
-                <li>End‑to‑end design: CAD → sim → hardware</li>
+                <li>End-to-end design: CAD → sim → hardware</li>
                 <li>Basic perception and planning</li>
               </ul>
             </article>
+
             <article class="rounded-2xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 p-6 hover:shadow-soft transition">
               <h3 class="text-lg font-bold">ASRS – Quality Control</h3>
-              <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Assisted with automated storage/retrieval system QA; image‑based defect checks and tolerance verification in OpenCV; documented workflow and metrics.</p>
+              <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">
+                Assisted with automated storage/retrieval system QA; image-based defect checks and tolerance verification in OpenCV; documented workflow and metrics.
+              </p>
               <ul class="mt-3 text-sm list-disc list-inside text-slate-600 dark:text-slate-300">
                 <li>Improved detection consistency with lighting control</li>
                 <li>Reusable pipeline for future cells</li>
@@ -184,6 +222,7 @@
         </div>
       </section>
 
+      <!-- Interests -->
       <section class="py-16">
         <div class="max-w-6xl mx-auto px-4">
           <h2 class="text-2xl md:text-3xl font-extrabold">Interests</h2>
@@ -210,14 +249,27 @@
   </footer>
 
   <script>
+    const $ = (s)=>document.querySelector(s);
+    const $$ = (s)=>Array.from(document.querySelectorAll(s));
+
     $('#year').textContent = new Date().getFullYear();
-    const root = document.documentElement; const themeToggle=$('#themeToggle');
+
+    const root = document.documentElement;
+    const themeToggle = $('#themeToggle');
     const pref = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark':'light');
     if (pref==='dark') root.classList.add('dark');
-    themeToggle.addEventListener('click', ()=>{ const isDark = root.classList.toggle('dark'); localStorage.setItem('theme', isDark?'dark':'light'); });
-    const routes = document.querySelectorAll('[data-route]');
-    function renderRoute(){ const hash = location.hash.replace('#',''); const path = hash || '/'; routes.forEach(sec => sec.classList.toggle('hidden', sec.getAttribute('data-route') !== path)); }
-    window.addEventListener('hashchange', renderRoute); renderRoute();
+    themeToggle.addEventListener('click', ()=>{
+      const isDark = root.classList.toggle('dark');
+      localStorage.setItem('theme', isDark?'dark':'light');
+    });
+
+    const routes = $$('[data-route]');
+    function renderRoute(){
+      const path = (location.hash.replace('#','')) || '/';
+      routes.forEach(sec => sec.classList.toggle('hidden', sec.getAttribute('data-route') !== path));
+    }
+    window.addEventListener('hashchange', renderRoute);
+    renderRoute();
   </script>
 </body>
 </html>
