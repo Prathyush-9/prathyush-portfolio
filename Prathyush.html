@@ -1,0 +1,331 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Prathyush | Projects</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- Minimal styles (no Tailwind needed) -->
+  <style>
+    :root { --fg:#111; --muted:#666; --border:#e5e7eb; --bg:#fff; }
+    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Arial, "Apple Color Emoji","Segoe UI Emoji"; margin:0; color:var(--fg); background:var(--bg); }
+    .container { max-width: 1100px; margin: 0 auto; padding: 24px; }
+    h1 { font-size: 28px; margin: 0 0 8px; }
+    p.note { color: var(--muted); margin: 0 0 16px; }
+    .toolbar { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; margin-bottom: 12px; }
+    .tab { border:1px solid var(--border); padding:6px 12px; border-radius: 999px; background:#f7f7f7; cursor:pointer; font-size: 14px; }
+    .tab.active { background:#111; color:#fff; }
+    .search { margin-left:auto; display:flex; align-items:center; gap:8px; border:1px solid var(--border); padding:6px 10px; border-radius: 999px; }
+    .search input { border:none; outline:none; font-size:14px; width: 220px; background:transparent; }
+    .grid { display: grid; grid-template-columns: 1fr; gap: 12px; }
+    @media (min-width:900px){ .grid{ grid-template-columns: 1fr 1fr; } }
+    .card { border:1px solid var(--border); border-radius:16px; padding:16px; box-shadow: 0 1px 2px rgba(0,0,0,0.03); background:#fff; }
+    .card h3 { margin:0 0 4px; font-size: 18px; }
+    .subtle { color: var(--muted); font-size: 13px; }
+    .bullets { margin:10px 0 6px; padding-left: 18px; }
+    .pill { display:inline-block; border:1px solid var(--border); border-radius:999px; padding:3px 8px; font-size:12px; margin:4px 6px 0 0; color:#222; background:#fafafa; }
+    .links a { display:inline-block; border:1px solid var(--border); border-radius:999px; padding:4px 10px; font-size:12px; text-decoration:none; color:#111; margin-left:6px; }
+    .empty { border:1px dashed var(--border); padding:24px; text-align:center; border-radius:12px; color:var(--muted); }
+    header { border-bottom: 1px solid var(--border); }
+    nav { max-width: 1100px; margin:0 auto; padding:14px 24px; display:flex; gap:16px; align-items:center; }
+    nav a { text-decoration:none; color:#111; font-weight:600; }
+    nav .spacer { flex:1; }
+  </style>
+  <!-- React via CDN (no build tools required) -->
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <script crossorigin src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="./">Home</a>
+      <a href="./portfolio.html">Projects</a>
+      <span class="spacer"></span>
+      <a href="https://github.com/Prathyush-9" target="_blank" rel="noreferrer">GitHub</a>
+      <a href="https://www.linkedin.com/in/prathyush-kvss-9b5131174" target="_blank" rel="noreferrer">LinkedIn</a>
+    </nav>
+  </header>
+
+  <div id="root"></div>
+
+  <script type="text/babel">
+    const CATEGORIES = ["All","Robotics & Automation","Perception","AI & ML","Embedded Systems"];
+
+    // ======= EASY-EDIT DATA SOURCE =======
+    const projectsData = [
+      // ROBOTICS & AUTOMATION
+      { title: "Automatic Storage & Retrieval System (ASRS)",
+        org: "KLE Tech / Beckhoff TwinCAT", year: "2021–2022",
+        category: "Robotics & Automation",
+        tags: ["Beckhoff","TwinCAT","OPC UA","Digital Twin"],
+        bullets: [
+          "Built an industrial-scale ASRS with Beckhoff PLCs and VFD motors in TwinCAT.",
+          "Created a MATLAB digital twin via OPC UA to optimize retrieval times.",
+          "Integrated browser-based HMI; reduced simulated latency by ~30%."
+        ],
+        links: [{label:"GitHub Profile", href:"https://github.com/Prathyush-9"}]
+      },
+      { title: "3‑DOF SCARA Manipulator (300g payload)",
+        org: "KLE Tech / ROS & Gazebo", year: "2021",
+        category: "Robotics & Automation",
+        tags: ["SCARA","ROS","Gazebo","Kinematics"],
+        bullets: [
+          "Simulated pick‑and‑place in ROS/Gazebo with suction end‑effector.",
+          "Built a physical arm with reliable 300g handling and precise motion control.",
+          "Ran FEA in SolidWorks to verify strength/durability."
+        ],
+        links: [{label:"GitHub Profile", href:"https://github.com/Prathyush-9"}]
+      },
+      { title: "Hexapod Robot – Bio‑inspired Gaits",
+        org: "University of Delaware", year: "2024",
+        category: "Robotics & Automation",
+        tags: ["Hexapod","MATLAB","Gait Planning","Arduino"],
+        bullets: [
+          "Implemented tripod/rotational gaits; simulated servo angles in MATLAB.",
+          "Integrated 18 servos on Arduino Mega; validated walking & in‑place rotation.",
+          "Reduced drift/lag via timing sync and control refinements."
+        ],
+        links: []
+      },
+      { title: "Microrobotics – Magnetic Control",
+        org: "UD Microrobotics Lab", year: "2024",
+        category: "Robotics & Automation",
+        tags: ["Python","Helmholtz Coils","Magnetic Control"],
+        bullets: [
+          "Python control to actuate microrobots with a 3D Helmholtz coil system.",
+          "Built SolidWorks fixtures; maintained incubation environment.",
+          "Logged experiments/protocols for traceability."
+        ],
+        links: []
+      },
+
+      // PERCEPTION
+      { title: "AMR with LiDAR & ROS Navigation",
+        org: "Difacto Technologies", year: "2022",
+        category: "Perception",
+        tags: ["AMR","LiDAR","SLAM","ROS"],
+        bullets: [
+          "ROS pipeline for localization/mapping (SLAM).",
+          "Fused LiDAR + odometry for obstacle avoidance and planning.",
+          "Validated robustness across dynamic aisle layouts."
+        ], links: []
+      },
+      { title: "AGV – Magnetic Tape Guidance",
+        org: "Difacto Technologies", year: "2022",
+        category: "Perception",
+        tags: ["AGV","PID","Sensors"],
+        bullets: [
+          "PID tuning for robust tape‑based tracking under load changes.",
+          "Integrated sensors for obstacle detection and feedback control.",
+          "Analyzed logs to minimize lateral error."
+        ], links: []
+      },
+      { title: "Quality Control of Rexroth Beams",
+        org: "Industry Project", year: "2021–2022",
+        category: "Perception",
+        tags: ["OpenCV","Deep Learning","Inspection"],
+        bullets: [
+          "Automated inspection for detection, dimension checks, fracture ID.",
+          "Designed mechanical inspection rig; CNC + 3D printed parts.",
+          "Improved accuracy/consistency; reduced manual dependency."
+        ], links: []
+      },
+      { title: "Lens Localization & Pick‑Place (DOBOT)",
+        org: "Asemtica Robotics", year: "2019",
+        category: "Perception",
+        tags: ["OpenCV","6‑DOF","Calibration"],
+        bullets: [
+          "Pose localization and camera→robot mapping.",
+          "Automated pick‑place on a 6‑DOF DOBOT using calibrated transforms.",
+          "Closed the loop from perception to manipulation."
+        ], links: []
+      },
+
+      // AI & ML
+      { title: "Energy Consumption Forecasting (LSTM)",
+        org: "UD Coursework", year: "2024",
+        category: "AI & ML",
+        tags: ["LSTM","Time Series","XGBoost"],
+        bullets: [
+          "Built LR/DT/RF/XGBoost/LSTM on 19k+ samples.",
+          "Best in class: R² ≈ 0.955, RMSE ≈ 0.037 after tuning & CV.",
+          "Key features: temperature, humidity, time."
+        ],
+        links: [{label:"GitHub Profile", href:"https://github.com/Prathyush-9"}]
+      },
+      { title: "Water Potability Classification",
+        org: "UD Coursework", year: "2024",
+        category: "AI & ML",
+        tags: ["Classification","Random Forest","GUI"],
+        bullets: [
+          "Imputation, outlier handling, scaling, class balancing.",
+          "Benchmarked LR, SVM, RF, XGBoost, NN; RF ≈ 68% accuracy.",
+          "Tkinter GUI for real‑time prediction + feature importance."
+        ], links: []
+      },
+      { title: "Symptom‑to‑Disease Identification",
+        org: "Personal", year: "2023",
+        category: "AI & ML",
+        tags: ["Healthcare AI","Decision Trees"],
+        bullets: [
+          "Interpretable models mapping symptoms to conditions.",
+          "Calibration and threshold selection for safer usage.",
+          "Risk mitigations for FP/FN documented."
+        ], links: []
+      },
+      { title: "CV Toolkit: Lane / Pose / Tracking + Pick Mapping",
+        org: "Asemtica / Personal", year: "2019–2023",
+        category: "AI & ML",
+        tags: ["OpenCV","ROS","Object Tracking"],
+        bullets: [
+          "Lane detection, pose estimation, object tracking pipelines.",
+          "Mapped image coords to robot frames for pick‑place.",
+          "Integrated real‑time vision nodes within ROS."
+        ], links: []
+      },
+
+      // EMBEDDED SYSTEMS
+      { title: "Bot‑to‑Bot Mesh Communication",
+        org: "Jaia Robotics", year: "2024–2025",
+        category: "Embedded Systems",
+        tags: ["Goby3","XBee","Mesh Networking"],
+        bullets: [
+          "Mesh‑style comms supporting broadcast + P2P for ASVs.",
+          "Configured XBee radios for reliable packet exchange.",
+          "PoC enabling swarm cooperation in navigation/decisions."
+        ], links: []
+      },
+      { title: "Custom PCB for Signal Identification",
+        org: "Lab Project", year: "2022",
+        category: "Embedded Systems",
+        tags: ["PCB","Signal Processing","Oscilloscope"],
+        bullets: [
+          "Fabricated PCB for signal conditioning/recognition.",
+          "Integrated with motor‑control stack for deterministic actuation.",
+          "Noise immunity improved via layout & filtering tweaks."
+        ], links: []
+      },
+      { title: "Schmitt Trigger Circuit",
+        org: "Lab Project", year: "2022",
+        category: "Embedded Systems",
+        tags: ["Analog","Hysteresis","Noise Immunity"],
+        bullets: [
+          "Built and characterized Schmitt trigger for clean digital transitions.",
+          "Boosted reliability of sensor reads under electrical noise.",
+          "Documented thresholds/timing for reuse."
+        ], links: []
+      },
+      { title: "Fire‑Fighting Robot (with Ladder)",
+        org: "Competition/Personal", year: "2021",
+        category: "Embedded Systems",
+        tags: ["Sensors","Actuators","Mechanisms"],
+        bullets: [
+          "Detected flame sources and actuated extinguisher; access mechanism.",
+          "Closed‑loop approach control; validated with obstacles.",
+          "Reliable suppression in bench tests."
+        ], links: []
+      },
+      { title: "Fastest Line Follower",
+        org: "Competition/Personal", year: "2021",
+        category: "Embedded Systems",
+        tags: ["PID","IR Sensors","uC"],
+        bullets: [
+          "High‑speed PID gains + tight sampling & actuation loops.",
+          "Consistent lap times; robust cornering.",
+          "Optimized ISRs for timing determinism."
+        ], links: []
+      },
+
+      // Placeholders for quick adding
+      { title:"[New Project]", org:"", year:"2025", category:"Robotics & Automation", tags:["tag1","tag2"], bullets:["Impact (metric/outcome).","Key tools/algorithms.","Validation approach."], links:[] },
+      { title:"[New Project]", org:"", year:"2025", category:"Perception",            tags:["tag1","tag2"], bullets:["Impact (metric/outcome).","Key tools/algorithms.","Validation approach."], links:[] },
+      { title:"[New Project]", org:"", year:"2025", category:"AI & ML",              tags:["tag1","tag2"], bullets:["Impact (metric/outcome).","Key tools/algorithms.","Validation approach."], links:[] },
+      { title:"[New Project]", org:"", year:"2025", category:"Embedded Systems",     tags:["tag1","tag2"], bullets:["Impact (metric/outcome).","Key tools/algorithms.","Validation approach."], links:[] }
+    ];
+
+    // ======= UI Components =======
+    function Tabs({active, setActive}) {
+      return (
+        <div className="toolbar">
+          {CATEGORIES.map(c =>
+            <button key={c}
+              className={"tab"+(active===c?" active":"")}
+              onClick={()=>setActive(c)}>{c}
+            </button>
+          )}
+        </div>
+      );
+    }
+
+    function Search({q, setQ}) {
+      return (
+        <div className="search">
+          <span>🔎</span>
+          <input placeholder="Search titles, tags, tools..."
+                 value={q} onChange={e=>setQ(e.target.value)} />
+        </div>
+      );
+    }
+
+    function Card({p}) {
+      return (
+        <div className="card">
+          <div style={{display:"flex",justifyContent:"space-between",gap:"12px"}}>
+            <div>
+              <h3>{p.title}</h3>
+              <div className="subtle">{p.org} • {p.year}</div>
+            </div>
+            <div className="links">
+              {p.links?.map((l,i)=>
+                <a key={i} href={l.href} target="_blank" rel="noreferrer">🔗 {l.label}</a>
+              )}
+            </div>
+          </div>
+          <ul className="bullets">
+            {p.bullets.map((b,i)=><li key={i}>{b}</li>)}
+          </ul>
+          <div>
+            {p.tags.map((t,i)=><span key={i} className="pill">{t}</span>)}
+          </div>
+        </div>
+      );
+    }
+
+    function App(){
+      const [active, setActive] = React.useState("All");
+      const [q, setQ] = React.useState("");
+      const filtered = React.useMemo(()=>{
+        return projectsData.filter(p=>{
+          const matchCat = active==="All" || p.category===active;
+          const hay = [p.title,p.org,p.category,...(p.tags||[]),...(p.bullets||[])].join(" ").toLowerCase();
+          const matchQ = hay.includes(q.toLowerCase());
+          return matchCat && matchQ;
+        });
+      },[active,q]);
+
+      return (
+        <div className="container">
+          <h1>Projects</h1>
+          <p className="note">Filter by category or search. Edit the <code>projectsData</code> array in this file to update.</p>
+
+          <div className="toolbar">
+            <Tabs active={active} setActive={setActive} />
+            <div style={{flex:1}}></div>
+            <Search q={q} setQ={setQ} />
+          </div>
+
+          {filtered.length === 0
+            ? <div className="empty">No results. Try another category or clear your search.</div>
+            : <div className="grid">
+                {filtered.map((p,i)=><Card key={p.title+i} p={p} />)}
+              </div>
+          }
+        </div>
+      );
+    }
+
+    const root = ReactDOM.createRoot(document.getElementById('root'));
+    root.render(<App/>);
+  </script>
+</body>
+</html>
