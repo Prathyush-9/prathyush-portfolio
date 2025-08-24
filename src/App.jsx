@@ -1,0 +1,3 @@
+import ProjectsPortfolio from './components/ProjectsPortfolio';
+// ...
+<ProjectsPortfolio />
